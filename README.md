@@ -7,17 +7,19 @@ See [here](https://github.com/concourse/bin) for more details.
 
 ### Quick-start
 
-See the Quick-start folder.
+See the [quick-start](quick-start) to get up and running with an (unsecure) setup to play with.
 
-### Generate private keys
+### Traditional setup
 
-Run generate-keys.sh to create keys to be used by the web host and workers.
+#### Generate private keys
 
-### Environment variables
+Run `./generate-keys.sh` to create keys to be used by the web host and workers.
 
-* `CONCOURSE_EXTERNAL_URL` - The URL to access concourse web at. Usually [http://192.168.99.100:8080](http://192.168.99.100:8080)
+#### Environment variables
+
+* `CONCOURSE_EXTERNAL_URL` - The URL to access concourse web at. Usually [http://192.168.99.100:8080](http://192.168.99.100:8080).
 * `CONCOURSE_LOGIN` - Username to use for concourse basic auth.
-* `CONCOURSE_PASSWORD` = Password to use for concourse basic auth.
+* `CONCOURSE_PASSWORD` - Password to use for concourse basic auth.
 
 Consider creating a [`.env`](https://docs.docker.com/compose/env-file/) file in the project root for `docker-compose` to use when building the containers.  For example:
 
@@ -25,13 +27,13 @@ Consider creating a [`.env`](https://docs.docker.com/compose/env-file/) file in 
     CONCOURSE_LOGIN="some_login"
     CONCOURSE_PASSWORD="super_secret"
 
-### Start Concourse
+#### Start Concourse
 
 Run:
 ```
 docker-compose up
 ```
 
-Open the CONCOURSE_EXTERNAL_URL specified above ([http://192.168.99.100:8080](http://192.168.99.100:8080)) and start using concourse.
+Open the `CONCOURSE_EXTERNAL_URL` specified above ([http://192.168.99.100:8080](http://192.168.99.100:8080)) and start using concourse.
 
 See [Using Concourse](https://concourse.ci/using-concourse.html) to get started.
