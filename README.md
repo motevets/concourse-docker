@@ -19,6 +19,12 @@ Run generate-keys.sh to create keys to be used by the web host and workers.
 * `CONCOURSE_LOGIN` - Username to use for concourse basic auth.
 * `CONCOURSE_PASSWORD` = Password to use for concourse basic auth.
 
+Consider creating a [`.env`](https://docs.docker.com/compose/env-file/) file in the project root for `docker-compose` to use when building the containers.  For example:
+
+    CONCOURSE_EXTERNAL_URL="http://192.168.99.100:8080"
+    CONCOURSE_LOGIN="some_login"
+    CONCOURSE_PASSWORD="super_secret"
+
 ### Start Concourse
 
 Run:
