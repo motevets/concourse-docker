@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eux
+
+project_root=$(git rev-parse --show-toplevel)
+cd $project_root
+
+sudo docker build -t caas/web web

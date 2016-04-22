@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -eux
+
+project_root=$(git rev-parse --show-toplevel)
+cd $project_root
+
+rm -rf keys
+rm bin/concourse_linux_amd64

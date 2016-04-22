@@ -9,11 +9,11 @@ See [here](https://github.com/concourse/bin) for more details.
 
 See the Quick-start folder.
 
-### Generate private keys
+### Prebuild requirements
 
-Run generate-keys.sh to create keys to be used by the web host and workers.
+Run `scripts/init` to create keys and download the concourse binary to be used by the web host and workers.
 
-### Environment variables
+#### Environment variables
 
 * `CONCOURSE_EXTERNAL_URL` - The URL to access concourse web at. Usually [http://192.168.99.100:8080](http://192.168.99.100:8080)
 * `CONCOURSE_LOGIN` - Username to use for concourse basic auth.
