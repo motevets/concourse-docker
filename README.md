@@ -13,7 +13,7 @@ See the [quick-start](quick-start) to get up and running with an (unsecure) setu
 
 #### Generate private keys
 
-Run `./generate-keys.sh` to create keys to be used by the web host and workers.
+Run `scripts/init` to create keys and download the concourse binary to be used by the web host and workers.
 
 #### Environment variables
 

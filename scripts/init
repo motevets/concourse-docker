@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eux
+
+project_root=$(git rev-parse --show-toplevel)
+
+cd $project_root
+
+if [ ! -d "keys" ]; then
+  mkdir -p keys
+  ssh-keygen -t rsa -f ./keys/host_key -N '' > /dev/null
+  ssh-keygen -t rsa -f ./keys/worker_key -N '' > /dev/null
+  ssh-keygen -t rsa -f ./keys/session_signing_key -N '' > /dev/null
+  cp ./keys/worker_key.pub ./keys/authorized_worker_keys > /dev/null
+  chmod 600 ./keys/* > /dev/null
+fi
+
+if [ ! -f "bin/concourse" ]; then
+  wget -O bin/concourse https://github.com/concourse/concourse/releases/download/v1.1.0/concourse_linux_amd64
+  chmod 755 bin/concourse
+fi

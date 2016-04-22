@@ -1,4 +1,4 @@
 .env
 keys/*
-bin/*
 .DS_Store
+bin/concourse

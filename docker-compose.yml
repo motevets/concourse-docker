@@ -9,7 +9,7 @@ concourse-web:
   build: .
   links:
     - concourse-db
-  command: /root/scripts/start.sh web
+  command: /usr/local/bin/start.sh web
   ports:
     - "8080:8080"
   environment:
@@ -22,4 +22,4 @@ concourse-worker:
   links:
     - concourse-web
     - concourse-db
-  command: /root/scripts/start.sh worker
+  command: /usr/local/bin/start.sh worker
